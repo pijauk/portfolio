@@ -114,8 +114,11 @@ function ProjectHeader() {
         }}
       >
         <div>
-          {['Instagram', 'LinkedIn'].map((label) => (
-            <a key={label} href="#" className="menu-secondary-link d-block mb-1">{label}</a>
+          {[
+            { label: 'Instagram', url: 'https://instagram.com' },
+            { label: 'LinkedIn', url: 'https://linkedin.com' },
+          ].map((link) => (
+            <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className="menu-secondary-link d-block mb-1">{link.label}</a>
           ))}
         </div>
         <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.875rem' }}>

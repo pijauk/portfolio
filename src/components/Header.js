@@ -137,9 +137,12 @@ const Header = forwardRef(function Header({ logoVisible = true }, logoRef) {
         }}
       >
         <div>
-          {['Instagram', 'LinkedIn'].map((label) => (
-            <a key={label} href="#" className="menu-secondary-link d-block mb-1">
-              {label}
+          {[
+            { label: 'Instagram', url: 'https://instagram.com' },
+            { label: 'LinkedIn', url: 'https://linkedin.com' },
+          ].map((link) => (
+            <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className="menu-secondary-link d-block mb-1">
+              {link.label}
             </a>
           ))}
         </div>

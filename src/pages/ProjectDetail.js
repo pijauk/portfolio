@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowUpRight, ArrowRight } from '../components/SvgIcons';
+import { ArrowRight } from '../components/SvgIcons';
 import ProjectHeader from '../components/ProjectHeader';
 import { getProjectBySlug, projects } from '../data/projects';
 import Contact from '../components/Contact';
@@ -181,6 +181,7 @@ function AnimatedSection({ children, delay = 0 }) {
   );
 }
 
+// eslint-disable-next-line no-unused-vars
 function GalleryImage({ src, alt, index }) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
@@ -209,6 +210,7 @@ function GalleryImage({ src, alt, index }) {
   );
 }
 
+// eslint-disable-next-line no-unused-vars
 function ResultCard({ result, index }) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
